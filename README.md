@@ -23,7 +23,9 @@ with the path to the license.dat from Microchip website.
 rather than as root/sudo at some system location. While all is good running 
 Libero, downloading IP fails because of write permissions. Still, it can be made
 to work if Libero was installed at system location using:
+
 > sudo LM_LICENSE_FILE=$LM_LICENSE_FILE /path/to/libero
+
 Notice that in this case even if the licensing daemon is started by a user
 account it will still work when running `libero` as sudo.
 
