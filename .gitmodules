@@ -1,0 +1,6 @@
+[submodule "gateware"]
+	path = gateware
+	url = https://git.beagleboard.org/beaglev-fire/gateware.git
+[submodule "bitstream-builder"]
+	path = bitstream-builder
+	url = https://git.beagleboard.org/beaglev-fire/bitstream-builder.git

@@ -1,7 +1,7 @@
 ### beaglev-fire-dev
 
 Repo for work on beaglev-fire board. Developer
-[repo](https://git.beagleboard.org/beaglev-fire/beaglev-fire/).
+[repo](https://git.beagleboard.org/beaglev-fire/).
 
 #### Unboxing
 
@@ -29,6 +29,13 @@ to work if Libero was installed at system location using:
 Notice that in this case even if the licensing daemon is started by a user
 account it will still work when running `libero` as sudo.
 
+#### Licensing
+Get a license from Microchip licensing [website](https://www.microchipdirect.com/fpga-software-products). Download the licensing daemons from [this](https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tools/fpga/licensing) Microchip page. Unzip and the daemon executables to some location. Add the path to the license file (Silver License requested from Microchip) to LM_LICENSE_FILE variable. Add the path to licensing daemons to PATH. `lmdown` is not provided but can be found with Modelsim/Questa (to shut down the licensing daemons). Start the licensing with
+
+```
+lmgrd -c license.dat -l /tmp/mylog.log
+```
+
 #### Blinky
 The FPGA is
 [MPFS025T-FCVG484E](https://www.microchip.com/en-us/products/fpgas-and-plds/system-on-chip-fpgas/polarfire-soc-fpgas).
@@ -49,4 +56,14 @@ from manage constraints. Git commit minimal files, make sure to regenerate the
 
 How to program this file? To be continued...
 
+#### ~Blinky
 
+Turns out we need the whole beaglev-fire package from [GitLab](https://git.beagleboard.org/beaglev-fire/gateware.git).
+
+To run the BUILD_BVF_GATEWARE.tcl make sure that Libero and the gateware repo are on the same disk drive otherwise some Microchip IP shows file copy errors.
+
+On Linux Mint need:
+```
+sudo apt install python3-git
+sudo apt install python3-yaml
+```
