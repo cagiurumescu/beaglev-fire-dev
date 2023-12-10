@@ -67,3 +67,7 @@ On Linux Mint need:
 sudo apt install python3-git
 sudo apt install python3-yaml
 ```
+
+After running build-bitstream.py in the `gateware` repo (seems newer and provides working overlays) one gets a set of files for programming the FPGA in DirectC, FlashProExpress, LinuxProgramming formats as detailed [here](https://docs.beagleboard.org/latest/boards/beaglev/fire/demos-and-tutorials/gateware/gateware-full-flow.html#programming-beaglev-fire-with-new-gateware).
+
+To copy the LinuxProgramming files mount the BeagleVFire on your PC using [usbdmsc](https://docs.beagleboard.org/latest/boards/beaglev/fire/demos-and-tutorials/flashing-board.html#flashing-emmc) method. Copy the LinuxProgramming directory in a folder `abcd` under `/usr/share/beagleboard/gateware`, boot the BeagleVFire and run `change-gateware.sh abcd`. Wait for it to complete programming and reboot. You should be able to see the new gateware installed by checking overlay version.
