@@ -1,9 +1,6 @@
 [submodule "gateware"]
 	path = gateware
 	url = https://git.beagleboard.org/beaglev-fire/gateware.git
-[submodule "bitstream-builder"]
-	path = bitstream-builder
-	url = https://git.beagleboard.org/beaglev-fire/bitstream-builder.git
-[submodule "polarfire-soc-bare-metal-examples"]
-	path = polarfire-soc-bare-metal-examples
-	url = https://github.com/polarfire-soc/polarfire-soc-bare-metal-examples.git
+[submodule "hart-software-services"]
+	path = hart-software-services
+	url = https://git.beagleboard.org/beaglev-fire/hart-software-services.git
